@@ -12,6 +12,19 @@ const AddProduct = () => {
         const rating = form.rating.value
         const image = form.image.value
         console.log(name, brand, type, price, description, rating, image)
+        const products = {name, brand, type, price, description, rating, image}
+        console.log(products)
+        fetch('http://localhost:5000/products',{
+            method:'POST',
+            headers:{
+                "content-type":"application/json",
+            },
+            body: JSON.stringify(products)
+        })
+        .then(res =>res.json())
+        .then(data =>{
+            console.log(data)
+        })
     }
     return (
         <div className="w-10/12 m-auto">
@@ -83,40 +96,3 @@ const AddProduct = () => {
 
 export default AddProduct;
 
-{/* <form className="w-8/12 m-auto p-10 " onSubmit={handleAddProduct}>
-    <div className="flex">
-        <div>
-            <label htmlFor="text">Name</label><br />
-            <input className="border mr-5" type="text" name="name" id="text" />
-        </div>
-        <div>
-            <label htmlFor="brand">Brand Name</label><br />
-            <input className="border mr-5" type="text" name="brand" id="brand" />
-        </div>
-    </div>
-    <div className="flex">
-        <div>
-            <label htmlFor="type">Type</label><br />
-            <input className="border mr-5" type="text" name="type" id="type" />
-        </div>
-        <div>
-            <label htmlFor="price">Price</label><br />
-            <input className="border mr-5" type="text" name="price" id="price" />
-        </div>
-    </div>
-    <div className="flex">
-        <div>
-            <label htmlFor="description">Short description</label><br />
-            <input className="border mr-5" type="text" name="description" id="description" />
-        </div>
-        <div>
-            <label htmlFor="rating">Rating</label><br />
-            <input className="border mr-5" type="text" name="rating" id="rating" />
-        </div>
-    </div>
-    <div>
-        <label htmlFor="image">Image</label><br />
-        <input className="border" type="text" name="image" id="image" />
-    </div>
-    <input className="btn border ml-7 mt-5" type="Submit" name="name" value="add product" />
-</form> */}
