@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const BrandDetails = () => {
@@ -20,7 +20,7 @@ const BrandDetails = () => {
                     <p>{card.price}</p>
                     <p>{card.rating}</p>
                     <div className="flex justify-between">
-                        <button className="btn">Details</button>
+                        <Link to={`/brand/branDetails/productDetails/${card._id}`}><button className="btn">Details</button></Link>
                         <button className="btn">Update</button>
                     </div>
                     

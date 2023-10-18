@@ -4,6 +4,9 @@ import Root from "../component/Root/Root";
 import Home from "../component/Home/Home";
 import AddProduct from "../component/Page/AddProduct";
 import BrandDetails from "../component/Home/BrandDetails";
+import ProductsDetails from "../component/Page/ProductsDetails";
+import SignUp from "../component/Page/SignUp";
+import LogIn from "../component/Page/LogIn";
 
 
 
@@ -22,9 +25,22 @@ const router = createBrowserRouter([
             element:<AddProduct></AddProduct>
         },
         {
+            path:'/logIn',
+            element: <LogIn></LogIn>
+        },
+        {
+            path:'/signUp',
+            element:<SignUp></SignUp>
+        },
+        {
             path:'/brand/:brandDetails',
             element:<BrandDetails></BrandDetails>,
-            loader: ({params})=> fetch(`http://localhost:5000/products/${params.brandDetails}`)
+            loader: ({params})=> fetch(`http://localhost:5000/products/brand/${params.brandDetails}`)
+        },
+        {
+            path:'/brand/branDetails/productDetails/:id',
+            element:<ProductsDetails></ProductsDetails>,
+            loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
         }
       ]
     },
