@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const BrandCar = () => {
@@ -14,8 +15,10 @@ const BrandCar = () => {
             {
                 cars.map(car => <div key={car.id}>
 
+                    <Link to={`/brand/${car.title}`}>
                     <h2 className="text-2xl font-bold">{car.title}</h2>
                     <img src={car.image} alt="" />
+                    </Link>
 
                 </div>)
             }
