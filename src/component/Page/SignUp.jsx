@@ -15,23 +15,23 @@ const SignUp = () => {
         const password = form.password.value;
         console.log(name, link, email, password)
 
-        if (password.length < 6) {
-            setRegisterError('is less than 6 characters');
-            return;
-        }
-        else if (!/[A-Z]/.test(password)) {
-            setRegisterError("don't have a capital letter");
-            return;
-        }
-        else if (!/[a-z]/.test(password)) {
-            setRegisterError("don't have a small letter");
-            return;
-        }
+        // if (password.length < 6) {
+        //     setRegisterError('is less than 6 characters');
+        //     return;
+        // }
+        // else if (!/[A-Z]/.test(password)) {
+        //     setRegisterError("don't have a capital letter");
+        //     return;
+        // }
+        // else if (!/[a-z]/.test(password)) {
+        //     setRegisterError("don't have a small letter");
+        //     return;
+        // }
         
-        else if (!/[@$!%*?&]/.test(password)) {
-            setRegisterError("don't have a special character");
-            return;
-        }
+        // else if (!/[@$!%*?&]/.test(password)) {
+        //     setRegisterError("don't have a special character");
+        //     return;
+        // }
         
 
         userSignIn(email, password)

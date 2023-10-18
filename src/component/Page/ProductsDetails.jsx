@@ -9,7 +9,19 @@ const ProductsDetails = () => {
     const {name, brand, type, price, description, rating, image}= card;
     const email = user.email;
     const handleUserCard = ()=>{
-        console.log({name, brand, type, price, description, rating, image,email})
+    const userCard = {name, brand, type, price, description, rating, image,email}
+    console.log(userCard)
+        fetch('http://localhost:5000/userCard',{
+            method:'POST',
+            headers:{
+                "content-type":"application/json",
+            },
+            body: JSON.stringify(userCard)
+        })
+        .then(res =>res.json())
+        .then(data =>{
+            console.log(data)
+        })
     }
     console.log(card)
     return (

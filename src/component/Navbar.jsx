@@ -15,7 +15,7 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li><NavLink to={'/'}>Home</NavLink></li>
                     <li><NavLink to={'/addProduct'}>Add Product</NavLink></li>
-                    <li><NavLink to={'myCard'}>My Card</NavLink></li>
+                    <li><NavLink to={'/myCard'}>My Card</NavLink></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">ExtremeCar</a>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to={'/'}>Home</NavLink></li>
                     <li><NavLink to={'/addProduct'}>Add Product</NavLink></li>
-                    <li><NavLink to={'myCard'}>My Card</NavLink></li>
+                    <li><NavLink to={'/myCard'}>My Card</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
