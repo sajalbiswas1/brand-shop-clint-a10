@@ -7,6 +7,7 @@ import BrandDetails from "../component/Home/BrandDetails";
 import ProductsDetails from "../component/Page/ProductsDetails";
 import SignUp from "../component/Page/SignUp";
 import LogIn from "../component/Page/LogIn";
+import PrivetRoute from "../PrivetRout/PrivetRoute";
 
 
 
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/addProduct',
-            element:<AddProduct></AddProduct>
+            element:<PrivetRoute><AddProduct></AddProduct></PrivetRoute>
         },
         {
             path:'/logIn',
@@ -34,12 +35,12 @@ const router = createBrowserRouter([
         },
         {
             path:'/brand/:brandDetails',
-            element:<BrandDetails></BrandDetails>,
+            element: <PrivetRoute><BrandDetails></BrandDetails></PrivetRoute>,
             loader: ({params})=> fetch(`http://localhost:5000/products/brand/${params.brandDetails}`)
         },
         {
             path:'/brand/branDetails/productDetails/:id',
-            element:<ProductsDetails></ProductsDetails>,
+            element:<PrivetRoute><ProductsDetails></ProductsDetails></PrivetRoute>,
             loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
         }
       ]
