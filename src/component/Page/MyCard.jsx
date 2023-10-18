@@ -12,6 +12,16 @@ const MyCard = () => {
                 setData(data)
             })
     }, [user.email])
+    const handleUserCardDelete = (id)=>{
+        
+        fetch(`http://localhost:5000/userCard/remove/${id}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            console.log(data)
+        })
+    }
 
     return (
         <div>
@@ -36,7 +46,7 @@ const MyCard = () => {
                                     <th>{idx +1}</th>
                                     <td>{myCard.brand}</td>
                                     <td>{myCard.price}</td>
-                                    <td>X</td>
+                                    <td onClick={()=>handleUserCardDelete(myCard._id)}>X</td>
                                 </tr>
                             )
                         }

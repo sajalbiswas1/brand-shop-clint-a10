@@ -10,8 +10,6 @@ import LogIn from "../component/Page/LogIn";
 import PrivetRoute from "../PrivetRout/PrivetRoute";
 import MyCard from "../component/Page/MyCard";
 
-
-
 const router = createBrowserRouter([
     {
       path: "/",
