@@ -16,7 +16,7 @@ const UpdateForm = () => {
         console.log(name, brand, type, price, rating, image)
         const products = {name, brand, type, price, rating, image}
         console.log(products)
-        fetch(`http://localhost:5000/products/${data._id}`,{
+        fetch(`https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/products/${data._id}`,{
             method: 'PUT',
             headers: {
                 "content-type":"application/json"

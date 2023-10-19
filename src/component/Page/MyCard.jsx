@@ -6,15 +6,16 @@ const MyCard = () => {
     const [data, setData] = useState([])
     console.log(user.email)
     useEffect(() => {
-        fetch(`http://localhost:5000/userCard/${user.email}`)
+        fetch(`https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/userCard/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setData(data)
             })
     }, [user.email])
     const handleUserCardDelete = (id)=>{
+        console.log(id)
         
-        fetch(`http://localhost:5000/userCard/remove/${id}`,{
+        fetch(`https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/userCard/remove/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())
@@ -46,7 +47,7 @@ const MyCard = () => {
                                     <th>{idx +1}</th>
                                     <td>{myCard.brand}</td>
                                     <td>{myCard.price}</td>
-                                    <td onClick={()=>handleUserCardDelete(myCard._id)}>X</td>
+                                    <td onClick={()=>handleUserCardDelete(myCard._id)}> <button>X</button> </td>
                                 </tr>
                             )
                         }

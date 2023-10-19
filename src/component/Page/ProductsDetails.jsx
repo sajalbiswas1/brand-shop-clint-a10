@@ -11,7 +11,7 @@ const ProductsDetails = () => {
     const handleUserCard = ()=>{
     const userCard = {name, brand, type, price, description, rating, image,email}
     console.log(userCard)
-        fetch('http://localhost:5000/userCard',{
+        fetch('https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/userCard',{
             method:'POST',
             headers:{
                 "content-type":"application/json",
