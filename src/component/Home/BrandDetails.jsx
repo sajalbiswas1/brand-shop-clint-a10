@@ -21,7 +21,7 @@ const BrandDetails = () => {
                     <p>{card.rating}</p>
                     <div className="flex justify-between">
                         <Link to={`/brand/branDetails/productDetails/${card._id}`}><button className="btn">Details</button></Link>
-                        <button className="btn">Update</button>
+                        <Link to={`/updateProduct/${card._id}`}><button className="btn">Update</button></Link>
                     </div>
                     
                 </div>

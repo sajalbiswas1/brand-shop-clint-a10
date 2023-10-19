@@ -9,6 +9,7 @@ import SignUp from "../component/Page/SignUp";
 import LogIn from "../component/Page/LogIn";
 import PrivetRoute from "../PrivetRout/PrivetRoute";
 import MyCard from "../component/Page/MyCard";
+import UpdateForm from "../component/Page/UpdateForm";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
         {
             path:'/signUp',
             element:<SignUp></SignUp>
+        },
+        {
+            path:'/updateProduct/:id',
+            element:<UpdateForm></UpdateForm>,
+            loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
         },
         {
             path:'/brand/:brandDetails',

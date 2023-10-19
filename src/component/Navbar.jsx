@@ -18,7 +18,7 @@ const Navbar = () => {
                     <li><NavLink to={'/myCard'}>My Card</NavLink></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">ExtremeCar</a>
+                <a className="btn btn-ghost normal-case text-xl">GearAutomation</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
