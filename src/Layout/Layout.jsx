@@ -35,18 +35,18 @@ const router = createBrowserRouter([
         },
         {
             path:'/updateProduct/:id',
-            element:<UpdateForm></UpdateForm>,
-            loader:({params})=>fetch(`https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/products/${params.id}`)
+            element:<PrivetRoute><UpdateForm></UpdateForm></PrivetRoute>,
+            loader:({params})=>fetch(`https://brand-shop-server-ma10.vercel.app/products/${params.id}`)
         },
         {
             path:'/brand/:brandDetails',
-            element: <PrivetRoute><BrandDetails></BrandDetails></PrivetRoute>,
-            loader: ({params})=> fetch(`https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/products/brand/${params.brandDetails}`)
+            element:<BrandDetails></BrandDetails> ,
+            loader: ({params})=> fetch(`https://brand-shop-server-ma10.vercel.app/products/brand/${params.brandDetails}`)
         },
         {
             path:'/brand/branDetails/productDetails/:id',
             element:<PrivetRoute><ProductsDetails></ProductsDetails></PrivetRoute>,
-            loader:({params})=>fetch(`https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/products/${params.id}`)
+            loader:({params})=>fetch(`https://brand-shop-server-ma10.vercel.app/products/${params.id}`)
         },
         {
             path:'/myCard',

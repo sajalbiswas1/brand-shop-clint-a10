@@ -11,13 +11,14 @@ const BrandCar = () => {
     },[])
     return (
         <div className="w-10/12 m-auto">
+            <h2 className="text-3xl font-bold my-8">Explore Categories</h2>
             <div className="grid grid-cols-3 gap-5">
             {
-                cars.map(car => <div key={car.id}>
+                cars.map(car => <div className="border bg-slate-100 rounded-lg" key={car.id}>
 
                     <Link to={`/brand/${car.title}`}>
-                    <h2 className="text-2xl font-bold">{car.title}</h2>
-                    <img src={car.image} alt="" />
+                    <img className="rounded-b-lg p-4" src={car.image} alt="" />
+                    <h2 className="text-2xl font-bold px-5 pb-5 text-center">{car.title}</h2>
                     </Link>
 
                 </div>)

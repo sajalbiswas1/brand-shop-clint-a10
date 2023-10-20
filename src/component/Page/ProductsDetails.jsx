@@ -11,7 +11,7 @@ const ProductsDetails = () => {
     const handleUserCard = ()=>{
     const userCard = {name, brand, type, price, description, rating, image,email}
     console.log(userCard)
-        fetch('https://brand-shop-server-ma10-bxcgvlvse-sajal-biswas-projects.vercel.app/userCard',{
+        fetch('https://brand-shop-server-ma10.vercel.app/userCard',{
             method:'POST',
             headers:{
                 "content-type":"application/json",
@@ -25,11 +25,21 @@ const ProductsDetails = () => {
     }
     console.log(card)
     return (
-        <div>
-            <h3>This is a Products Details </h3>
-            <p>{card.brand}:{card.name}</p>
+        <div className="bg-[#fff2f2]">
+            <div className="w-10/12 pt-12">
+            <div className="w-1/3 m-auto">
             <img src={card.image} alt="" />
-            <button onClick={handleUserCard} className="btn btn-primary">Add to Card</button>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Name : </span>{card.name}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Brand : </span>{card.brand}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Type : </span>{card.type}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Price : </span>{card.price}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Description : </span>{card.description}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500 border-b-green-500"><span className="font-bold">Rating : </span>{card.rating}</p>
+            <div className="flex justify-center">
+            <button onClick={handleUserCard} className="p-1 my-3 text-green-600 hover:bg-red-200  mb-3 border-green-600 border font-semibold">Add to Card</button>
+            </div>
+        </div>
+        </div>
         </div>
     );
 };
