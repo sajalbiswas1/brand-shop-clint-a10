@@ -12,7 +12,7 @@ const BrandCar = () => {
     return (
         <div className="w-10/12 m-auto">
             <h2 className="text-3xl font-bold my-8">Explore Categories</h2>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
             {
                 cars.map(car => <div className="border bg-slate-100 rounded-lg" key={car.id}>
 

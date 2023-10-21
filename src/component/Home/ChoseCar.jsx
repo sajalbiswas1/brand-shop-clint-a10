@@ -7,7 +7,7 @@ const ChoseCar = () => {
     return (
         <div className='w-10/12 m-auto mt-16'>
             <h1 className="text-3xl font-bold border-l-4 border-red-500 pl-5 mb-8">Why Did You Choose Our Car <br /> Listing Services?</h1>
-        <div className='grid grid-cols-2'>
+        <div className='grid lg:grid-cols-2'>
             <div>
                 <img src="https://i.ibb.co/0cN80Dk/Toyota-Glanza-060520221539.jpg" alt="" />
             </div>

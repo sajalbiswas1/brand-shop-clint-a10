@@ -36,49 +36,49 @@ const UpdateForm = () => {
         })
     }
     return (
-        <div className="bg-[#fff2f2]">
+        <div className="bg-[#fff2f2] pb-5">
             <h2 className="text-center text-3xl py-5 font-bold">Update Form</h2>
-            <div className="w-2/4 m-auto border bg-white">
+            <div className="lg:w-6/12 md:w-9/12 w-11/12 p-3 md:px-7 m-auto border bg-white">
             
             <form onSubmit={handleUpdateProduct} className="">
-                <div className="flex gap-5 justify-center">
+                <div className="grid grid-cols-2 gap-5">
                 <div className="">
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
-                    <input type="text" name="name" defaultValue={data.name} placeholder="Name" className="p-1  border-red-600 border" />
+                    <input type="text" name="name" defaultValue={data.name} placeholder="Name" className="p-1 border-red-600 w-full border" />
                 </div>
                 <div className="">
                     <label className="label">
                         <span className="label-text">Brand Name</span>
                     </label>
-                    <input type="text" name="brand" defaultValue={data.brand} placeholder="Brand Name" className="p-1  border-red-600 border" />
+                    <input type="text" name="brand" defaultValue={data.brand} placeholder="Brand Name" className="p-1  border-red-600 w-full border" />
                     <label className="label">
                     </label>
                 </div>
                 </div>
-                <div className="flex gap-5 justify-center">
+                <div className="grid grid-cols-2 gap-5">
                 <div className="">
                     <label className="label">
                         <span className="label-text">Type </span>
                     </label>
-                    <input type="text" name="type" defaultValue={data.type} placeholder="Type " className="p-1  border-red-600 border" />
+                    <input type="text" name="type" defaultValue={data.type} placeholder="Type " className="p-1  border-red-600 w-full border" />
                 </div>
                 <div className="">
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="text" name="price" defaultValue={data.price} placeholder="Price" className="p-1  border-red-600 border" />
+                    <input type="text" name="price" defaultValue={data.price} placeholder="Price" className="p-1  border-red-600 w-full border" />
                     <label className="label">
                     </label>
                 </div>
                 </div>
-                <div className="flex gap-5 justify-center">
+                <div className="grid grid-cols-2 gap-5">
                 <div className="">
                     <label className="label">
                         <span className="label-text">Rating</span>
                     </label>
-                    <input type="text" name="rating" defaultValue={data.rating} placeholder="Rating" className="p-1  border-red-600 border" />
+                    <input type="text" name="rating" defaultValue={data.rating} placeholder="Rating" className="p-1  border-red-600 w-full border" />
                     <label className="label">
                     </label>
                 </div>
@@ -86,11 +86,11 @@ const UpdateForm = () => {
                     <label className="label">
                         <span className="label-text">Image</span>
                     </label>
-                    <input type="text" name="image" defaultValue={data.image} placeholder="Image link" className="p-1 px-2  border-red-600 border" />
+                    <input type="text" name="image" defaultValue={data.image} placeholder="Image link" className="p-1 px-2  border-red-600 w-full border" />
                 </div>
                 </div>
                 <div className="mt-6 flex justify-center">
-                    <button className="p-1  text-green-600 hover:bg-red-200  mb-3 border-green-600 border font-bold">UpDate</button>
+                    <button className="py-2 px-5 text-lg text-white hover:bg-green-400 bg-green-600   mb-3  border font-bold">UpDate</button>
                 </div>
             </form>
 

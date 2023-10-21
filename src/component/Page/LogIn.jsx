@@ -54,9 +54,9 @@ const LogIn = () => {
     return (
 
 
-        <div className="bg-[#fff2f2]">
+        <div className="bg-[#fff2f2] pb-10">
             <h3 className="text-3xl font-bold text-center py-5">SignIn</h3>
-            <div className="w-1/3 m-auto border bg-white p-5">
+            <div className="lg:w-4/12 md:w-6/12 w-9/12 m-auto border bg-white p-5">
                 <form onSubmit={handleLogin} className="">
                     <div className="form-control">
                         <label className="label">

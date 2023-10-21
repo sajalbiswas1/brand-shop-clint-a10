@@ -74,9 +74,9 @@ const SignUp = () => {
 
     }
     return (
-        <div className="bg-[#fff2f2]">
+        <div className="bg-[#fff2f2] pb-10">
             <h2 className="text-3xl font-bold text-center py-5">Sign Up</h2>
-            <div className="w-1/3 m-auto bg-white p-5">
+            <div className="lg:w-4/12 md:w-6/12 w-9/12 m-auto bg-white p-5">
                 <form onSubmit={handleSignIn} className="">
                     <div className="form-control">
                         <label className="label">

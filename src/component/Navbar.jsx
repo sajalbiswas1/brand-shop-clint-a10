@@ -5,7 +5,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const Navbar = () => {
     const { userSignOut, user } = useContext(AuthContext)
     return (
-        <div className="navbar bg-base-100 w-10/12 m-auto">
+        <div className="navbar bg-base-100 lg:w-10/12 md:w-10/12 m-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,7 +17,7 @@ const Navbar = () => {
                         <li><NavLink to={'/myCard'}>My Card</NavLink></li>
                     </ul>
                 </div>
-                <p className="text-3xl font-bold flex flex-col"><span className="text-orange-500">Gear</span><span className="text-base">Automation</span></p>
+                <Link to={'/'}><p className="text-3xl font-bold flex flex-col"><span className="text-orange-500">Gear</span><span className="text-base">Automation</span></p></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

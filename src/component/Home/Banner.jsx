@@ -7,7 +7,7 @@ const Banner = () => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Welcome To Our Luxury Automation</h1>
                     <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <button className="btn btn-primary"><a href="#special">Special</a></button>
                 </div>
             </div>
         </div>

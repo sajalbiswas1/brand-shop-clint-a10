@@ -8,10 +8,10 @@ const Special = () => {
         .then(data=> setData(data))
     },[])
     return (
-        <div className="w-10/12 m-auto">
-            <h1 className="text-4xl font-bold pt-12 mb-5 text-center">Special{data.length}</h1>
+        <div className="w-10/12 md:mt-10 m-auto pb-10" id="special">
+            <h1 className="text-4xl font-bold pt-12 mb-5 text-center">Special</h1>
             <hr className="w-52 m-auto border-orange-500 mb-10 border-2" />
-            <div className="grid grid-cols-4 gap-5">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5">
             {
                 data.map(card => <div className="border bg-stone-600 text-white border-white" key={card._id}>
 

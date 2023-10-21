@@ -1,16 +1,20 @@
 // import { AiFillStar } from "react-icons/ai";
 
+import { useEffect } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 
 
 const BrandDetails = () => {
     const data = useLoaderData()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div className="bg-[#fff2f2]">
             <div className="w-10/12 m-auto">
-                {/* <div className="carousel  ">
+                <div className="carousel  ">
                     <div id="slide1" className="carousel-item relative w-full">
                         <img  src="https://i.ibb.co/HGsvnC2/Untitled-design-28.png" className="w-full" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -33,11 +37,11 @@ const BrandDetails = () => {
                         </div>
                     </div>
                     
-                </div> */}
+                </div>
             </div>
             <div className="w-10/12 m-auto ">
                 <h2 className="text-3xl font-bold py-7 ">{data[0].brand} Collection {data.length}</h2>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
                     {
                         data.map(card => <div key={card._id}>
                             <div className="border rounded-lg bg-lime-100 text-center">
