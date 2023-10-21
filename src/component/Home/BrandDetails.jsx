@@ -7,16 +7,26 @@ import StarRatings from "react-star-ratings";
 
 const BrandDetails = () => {
     const data = useLoaderData()
+
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+    }, [])
+
+    if (data.length === 0) {
+        return <>
+            <div className="bg-emerald-100 py-24 text-center">
+                <p className="text-5xl font-bold "> Brand Products is Not Available</p>
+                <Link to={'/'}><p className="mt-10 font-semibold underline">Go Back Home</p></Link>
+            </div>
+        </>
+    }
 
     return (
         <div className="bg-[#fff2f2]">
             <div className="w-10/12 m-auto">
                 <div className="carousel  ">
                     <div id="slide1" className="carousel-item relative w-full">
-                        <img  src="https://i.ibb.co/HGsvnC2/Untitled-design-28.png" className="w-full" />
+                        <img src="https://i.ibb.co/HGsvnC2/Untitled-design-28.png" className="w-full" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide3" className="btn btn-circle">❮</a>
                             <a href="#slide2" className="btn btn-circle">❯</a>
@@ -36,7 +46,7 @@ const BrandDetails = () => {
                             <a href="#slide1" className="btn btn-circle">❯</a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div className="w-10/12 m-auto ">
@@ -59,6 +69,9 @@ const BrandDetails = () => {
                     }
                 </div>
             </div>
+
+
+
         </div>
     );
 };

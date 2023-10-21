@@ -95,7 +95,7 @@ const AddProduct = () => {
                     <input type="text" name="image" placeholder="Image link" className="p-1 border-red-600 w-full border" />
                 </div>
                 <div className="flex justify-center mt-6">
-                    <button className="p-1 text-green-600 hover:bg-green-200  mb-3 border-green-600  border font-semibold">Add Product</button>
+                    <button className="py-2 px-5 text-lg text-white hover:bg-green-400 bg-green-600   mb-3  border font-bold">Add Product</button>
                 </div>
             </form>
 
