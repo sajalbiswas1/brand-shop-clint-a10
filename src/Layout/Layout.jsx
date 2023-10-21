@@ -10,6 +10,7 @@ import LogIn from "../component/Page/LogIn";
 import PrivetRoute from "../PrivetRout/PrivetRoute";
 import MyCard from "../component/Page/MyCard";
 import UpdateForm from "../component/Page/UpdateForm";
+import Chaining from "../component/Chaining";
 
 const router = createBrowserRouter([
     {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/brand/:brandDetails',
-            element:<BrandDetails></BrandDetails> ,
+            element:<Chaining><BrandDetails></BrandDetails></Chaining> ,
             loader: ({params})=> fetch(`https://brand-shop-server-ma10.vercel.app/products/brand/${params.brandDetails}`)
         },
         {

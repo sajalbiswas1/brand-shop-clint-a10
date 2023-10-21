@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { AiFillStar } from "react-icons/ai";
 
 const MyCard = () => {
     const { user } = useContext(AuthContext);
@@ -19,7 +20,7 @@ const MyCard = () => {
 
         Swal.fire({
             title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            // text: "You won't be able to revert this!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -64,9 +65,9 @@ const MyCard = () => {
            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Name : </span>{myCard.name}</p>
             <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Brand : </span>{myCard.brand}</p>
             <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Type : </span>{myCard.type}</p>
-            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Price : </span>{myCard.price}</p>
-            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Description : </span>{myCard.description}</p>
-            <p className="border px-2 border-t-green-500 border-x-green-500 border-b-green-500"><span className="font-bold">Rating : </span>{myCard.rating}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Price : </span>${myCard.price}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Description : </span>{myCard.description.slice(0,80)}...</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500 border-b-green-500 flex items-center gap-1"><span className="font-bold">Rating : </span>{myCard.rating} <AiFillStar className="text-orange-400"></AiFillStar></p>
             <div className="flex justify-center">
             <button onClick={()=>handleUserCardDelete(myCard._id)} className="p-1 my-3 text-green-600 hover:bg-red-200  mb-3 border-green-600 border font-semibold">Remove</button>
            </div>

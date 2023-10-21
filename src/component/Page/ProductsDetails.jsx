@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const ProductsDetails = () => {
@@ -20,9 +21,14 @@ const ProductsDetails = () => {
         })
         .then(res =>res.json())
         .then(data =>{
+            notify()
             console.log(data)
         })
     }
+    //toast
+    const notify = () => toast.success("Add to Card!", {
+        position: toast.POSITION.TOP_CENTER
+    });
     console.log(card)
     return (
         <div className="bg-[#fff2f2]">
@@ -32,7 +38,7 @@ const ProductsDetails = () => {
             <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Name : </span>{card.name}</p>
             <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Brand : </span>{card.brand}</p>
             <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Type : </span>{card.type}</p>
-            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Price : </span>{card.price}</p>
+            <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Price : </span>${card.price}</p>
             <p className="border px-2 border-t-green-500 border-x-green-500"><span className="font-bold">Description : </span>{card.description}</p>
             <p className="border px-2 border-t-green-500 border-x-green-500 border-b-green-500"><span className="font-bold">Rating : </span>{card.rating}</p>
             <div className="flex justify-center">

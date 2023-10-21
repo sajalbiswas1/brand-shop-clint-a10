@@ -5,7 +5,7 @@ import { FaCarSide } from 'react-icons/fa';
 
 const ChoseCar = () => {
     return (
-        <div className='w-10/12 m-auto mt-12'>
+        <div className='w-10/12 m-auto mt-16'>
             <h1 className="text-3xl font-bold border-l-4 border-red-500 pl-5 mb-8">Why Did You Choose Our Car <br /> Listing Services?</h1>
         <div className='grid grid-cols-2'>
             <div>
